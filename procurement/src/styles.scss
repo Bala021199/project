@@ -1,0 +1,63 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: "Material Icons";
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
+    src: local("Material Icons"), local("MaterialIcons-Regular");
+
+  }
+  
+  .material-icons {
+    font-family: "Material Icons";
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px; /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+  
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+  
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+  
+    /* Support for IE. */
+    font-feature-settings: "liga";
+  }
+  
+  .p-a-0 {
+    padding: 0px !important;
+  }
+  .p-a-12 {
+    padding: 12px !important;
+  }
+  .p-a-8 {
+    padding: 8px !important;
+  }
+  
+  .p-a-16 {
+    padding: 16px !important;
+  }
+  .p-l-12 {
+    padding-left: 12px;
+  }
+  .p-r-12 {
+    padding-right: 12px;
+  }
+  .p-t-12 {
+    padding-top: 12px;
+  }
+  .p-b-12 {
+    padding-bottom: 12px;
+  }
+  .m-a-0 {
+    margin: 0px !important;
+  }

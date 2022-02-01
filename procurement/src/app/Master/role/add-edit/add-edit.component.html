@@ -1,0 +1,161 @@
+<button class="add-btn" data-toggle="modal" data-target="#myModal">
+  <img src="../../../../assets/Ac-set.png" alt="" />
+  <span class="sm-font">New Role</span>
+</button>
+<br />
+
+<!-- ************** MODEL BOX *************** -->
+<div class="modal" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h6 class="modal-title sub-title p-a-12 tit-head">New Role</h6>
+        <button
+          type="button"
+          class="close p-a-12 m-a-0 point"
+          data-dismiss="modal"
+        >
+          &times;
+        </button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body p-a-12">
+        <h6 class="sub-title p-a-12 m-a-0 tit-head">Basic info</h6>
+        <div class="role-row p-a-12">
+          <div class="col-sm-3 p-a-0">
+            <label class="m-a-0 font-body">Role name</label>
+          </div>
+          <div class="col-sm-8">
+            <input type="text" class="form p-a-12" />
+          </div>
+        </div>
+        <h6 class="m-a-0 tit-head acc-space">Access & Permissions</h6>
+        <form [formGroup]="form" (ngSubmit)="submitForm()" novalidate id="form">
+          <div class="div-space">
+            <div class="col-sm-12">
+              <div class="row start">
+                <div class="col-sm-1 p-a-16 m-a-0">
+                  <input
+                    type="checkbox"
+                    name="Features"
+                    formControlName="Features"
+                  />
+                </div>
+                <div class="col-sm-10 box-text">
+                  <span class="tit-head">Features</span>
+                </div>
+              </div>
+              <div class="row point" (click)="onShowlist()">
+                <div class="col-sm-1 p-a-16 m-a-0">
+                  <input
+                    type="checkbox"
+                    name="Dashboard"
+                    formControlName="Dashboard"
+                    class="point"
+                  />
+                </div>
+                <div class="col-sm-10 box-text">
+                  <span class="font-body point">Dashboard</span>
+                </div>
+                <div class="col-sm-1 p-a-8">
+                  <div>
+                    <span
+                      class="material-icons p-a-8 point icon-clr"
+                      *ngIf="!showlist"
+                    >
+                      expand_more
+                    </span>
+                    <span
+                      class="material-icons point icon-clr"
+                      *ngIf="showlist"
+                    >
+                      expand_less
+                    </span>
+                  </div>
+                </div>
+                <div
+                  class="col-sm-12 drp-down"
+                  [ngClass]="showlist ? 'drp-open' : 'drp-close'"
+                >
+                  <div class="row">
+                    <div class="col-sm-1 p-a-16 m-a-0">
+                      <input type="checkbox" name="IT" formControlName="IT" />
+                    </div>
+                    <div class="col-sm-10 box-text">
+                      <span class="font-body">IT & T</span>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-1 p-a-16 m-a-0">
+                      <input
+                        type="checkbox"
+                        name="Construction"
+                        formControlName="Construction"
+                      />
+                    </div>
+                    <div class="col-sm-10 box-text">
+                      <span class="font-body">Construction</span>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-1 p-a-16 m-a-0">
+                      <input
+                        type="checkbox"
+                        name="Plants"
+                        formControlName="Plants"
+                      />
+                    </div>
+                    <div class="col-sm-10 box-text">
+                      <span class="font-body">Plants & Materials</span>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-sm-1 p-a-16 m-a-0">
+                      <input
+                        type="checkbox"
+                        name="Support"
+                        formControlName="Support"
+                      />
+                    </div>
+                    <div class="col-sm-10 box-text">
+                      <span class="font-body">Support Services</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row bottom">
+                <div class="col-sm-1 p-a-16 m-a-0">
+                  <input
+                    type="checkbox"
+                    name="Reports"
+                    formControlName="Reports"
+                  />
+                </div>
+                <div class="col-sm-10 box-text">
+                  <span class="font-body">Reports</span>
+                </div>
+                <div class="col-sm-1 p-a-8">
+                  <span class="material-icons p-a-8 point icon-clr">
+                    expand_more
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="p-a-12 m-a-0">
+            <button
+              type="submit"
+              class="btn btn-primary p-a-12 m-a-0"
+              data-dismiss="modal"
+              (click)="submitForm()"
+            >
+              Create
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
