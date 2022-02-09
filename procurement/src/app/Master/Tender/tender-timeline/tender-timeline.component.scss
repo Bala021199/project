@@ -1,0 +1,41 @@
+$cus-hd-clr: rgba(3, 13, 27, 0.87);
+$cus-sub-hd-clr: rgba(3, 13, 27, 0.6);
+$cus-bt-br-clr:#2472E3;
+.head-font {
+  font-weight: 600;
+  font-size: 16px;
+  color: $cus-hd-clr;
+}
+.sub-head-font {
+  font-weight: 400;
+  font-size: 16px;
+  color: $cus-sub-hd-clr$cus-sub-hd-clr;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.p-trl-b {
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 12px;
+  padding-bottom: 8px;
+}
+.p-brl-t {
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 8px;
+  padding-bottom: 12px;
+}
+.btn-save {
+  width: 81px;
+  height: 40px;
+  border: 1px solid $cus-bt-br-clr;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+.btn-span {
+  padding: 12px 24px;
+}

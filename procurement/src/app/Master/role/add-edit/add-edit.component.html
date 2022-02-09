@@ -10,7 +10,8 @@
     <div class="modal-content">
       <!-- Modal Header -->
       <div class="modal-header">
-        <h6 class="modal-title sub-title p-a-12 tit-head">New Role</h6>
+        <!-- <h6 class="modal-title sub-title p-a-12 tit-head">New Role</h6> -->
+        <h6 class="modal-title sub-title p-a-12 tit-head">Edit Role</h6>
         <button
           type="button"
           class="close p-a-12 m-a-0 point"
@@ -22,26 +23,41 @@
 
       <!-- Modal body -->
       <div class="modal-body p-a-12">
-        <h6 class="sub-title p-a-12 m-a-0 tit-head">Basic info</h6>
-        <div class="role-row p-a-12">
-          <div class="col-sm-3 p-a-0">
-            <label class="m-a-0 font-body">Role name</label>
-          </div>
-          <div class="col-sm-8">
-            <input type="text" class="form p-a-12" />
-          </div>
-        </div>
-        <h6 class="m-a-0 tit-head acc-space">Access & Permissions</h6>
         <form [formGroup]="form" (ngSubmit)="submitForm()" novalidate id="form">
+          <h6 class="sub-title p-a-12 m-a-0 tit-head">Basic info</h6>
+          <div class="role-row p-a-12">
+            <div class="col-sm-3 p-a-0">
+              <label class="m-a-0 font-body">Role name</label>
+            </div>
+            <div class="col-sm-8">
+              <input
+                type="text"
+                class="form p-a-12"
+                formControlName="roleName"
+              />
+            </div>
+          </div>
+            <div class="role-row p-a-12">
+            <div class="col-sm-3 p-a-0">
+              <label class="sub-head m-a-0 font-body">Status</label>
+            </div>
+            <div class="col-sm-8">
+              <select
+                class="form-control form point"
+                id="exampleFormControlSelect1"
+                formControlName="status"
+              >
+                <option>Active</option>
+                <option>Inactive</option>
+              </select>
+            </div>
+          </div>
+          <h6 class="m-a-0 tit-head acc-space">Access & Permissions</h6>
           <div class="div-space">
             <div class="col-sm-12">
               <div class="row start">
                 <div class="col-sm-1 p-a-16 m-a-0">
-                  <input
-                    type="checkbox"
-                    name="Features"
-                    formControlName="Features"
-                  />
+                  <input type="checkbox" formControlName="Features" />
                 </div>
                 <div class="col-sm-10 box-text">
                   <span class="tit-head">Features</span>
@@ -51,7 +67,6 @@
                 <div class="col-sm-1 p-a-16 m-a-0">
                   <input
                     type="checkbox"
-                    name="Dashboard"
                     formControlName="Dashboard"
                     class="point"
                   />
@@ -78,10 +93,11 @@
                 <div
                   class="col-sm-12 drp-down"
                   [ngClass]="showlist ? 'drp-open' : 'drp-close'"
+                  formGroupName="Db"
                 >
                   <div class="row">
                     <div class="col-sm-1 p-a-16 m-a-0">
-                      <input type="checkbox" name="IT" formControlName="IT" />
+                      <input type="checkbox" formControlName="IT" />
                     </div>
                     <div class="col-sm-10 box-text">
                       <span class="font-body">IT & T</span>
@@ -89,11 +105,7 @@
                   </div>
                   <div class="row">
                     <div class="col-sm-1 p-a-16 m-a-0">
-                      <input
-                        type="checkbox"
-                        name="Construction"
-                        formControlName="Construction"
-                      />
+                      <input type="checkbox" formControlName="Construction" />
                     </div>
                     <div class="col-sm-10 box-text">
                       <span class="font-body">Construction</span>
@@ -101,11 +113,7 @@
                   </div>
                   <div class="row">
                     <div class="col-sm-1 p-a-16 m-a-0">
-                      <input
-                        type="checkbox"
-                        name="Plants"
-                        formControlName="Plants"
-                      />
+                      <input type="checkbox" formControlName="Plants" />
                     </div>
                     <div class="col-sm-10 box-text">
                       <span class="font-body">Plants & Materials</span>
@@ -113,11 +121,7 @@
                   </div>
                   <div class="row">
                     <div class="col-sm-1 p-a-16 m-a-0">
-                      <input
-                        type="checkbox"
-                        name="Support"
-                        formControlName="Support"
-                      />
+                      <input type="checkbox" formControlName="Support" />
                     </div>
                     <div class="col-sm-10 box-text">
                       <span class="font-body">Support Services</span>
@@ -127,11 +131,7 @@
               </div>
               <div class="row bottom">
                 <div class="col-sm-1 p-a-16 m-a-0">
-                  <input
-                    type="checkbox"
-                    name="Reports"
-                    formControlName="Reports"
-                  />
+                  <input type="checkbox" formControlName="Reports" />
                 </div>
                 <div class="col-sm-10 box-text">
                   <span class="font-body">Reports</span>
